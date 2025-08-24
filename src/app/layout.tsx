@@ -4,8 +4,8 @@ import Script from "next/script";
 
 import { env } from "@/lib/env";
 import { ThemeProvider } from "@/components/provider/theme-provider";
+import BaseLayout from "@/components/layout/base";
 import { themeConfig } from "@/lib/theme";
-
 import "./globals.css";
 
 const geistSans = Geist({
@@ -85,7 +85,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
-        <ThemeProvider {...themeConfig}>{children}</ThemeProvider>
+        <ThemeProvider {...themeConfig}>
+          <BaseLayout>{children}</BaseLayout>
+        </ThemeProvider>
       </body>
     </html>
   );
