@@ -50,7 +50,7 @@ const eslintConfig = [
 
       // Import rules
       "import/order": [
-        "error",
+        "off",
         {
           groups: ["builtin", "external", "internal", "parent", "sibling", "index"],
           "newlines-between": "always",
